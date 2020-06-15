@@ -1,0 +1,32 @@
+.light-grey-background {
+    background-color: #f3f3f3 !important;
+}
+.grey-header {
+    background-color: #626262 !important;
+}
+.light-rey-text {
+    color: #f3f3f3 !important;
+}
+.grey-text {
+    color: #363636 !important;
+}
+.red-text {
+    color: #c52b2d !important;
+}
+.red-background {
+    background-color: #c52b2d !important;
+}
+.tab-item {
+    width: 100vw;
+    height: 700px;
+}
+.flex-center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.absolute-alert {
+    position:  absolute;
+    padding: 5px;
+    width: 100%;
+}
