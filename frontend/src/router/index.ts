@@ -52,6 +52,11 @@ const routes: Array<RouteConfig> = [
     path: '/',
     name: 'Home',
     component: () => import('../components/pages/Home.vue')
+  },
+  {
+    path: '/result',
+    name: 'Result',
+    component: () => import('../components/organisms/Result.vue')
   }
 ]
 

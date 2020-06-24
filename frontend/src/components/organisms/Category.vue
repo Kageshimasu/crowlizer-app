@@ -13,6 +13,8 @@
           color="teal"
           height="3vh"
           label="選択してください"
+          item-value="id"
+          item-text="name"
           :items="items"
           @input="selectedItem"
           dense
@@ -30,18 +32,29 @@ export default class Category extends Vue {
   item = this.$store.getters.category
   alert = false
   items = [
-    'アート', '音楽', '開発', 'フード', 'ファッション', '書籍', 'アニメ・漫画',
-    'スポーツ', '映像', 'テクノロジー', 'ビジネス', '地域活性化']
+    { id: 1, name: 'アート' },
+    { id: 2, name: '音楽' },
+    { id: 3, name: '開発' },
+    { id: 4, name: 'フード' },
+    { id: 5, name: 'ファッション' },
+    { id: 6, name: '書籍' },
+    { id: 7, name: 'アニメ・漫画' },
+    { id: 8, name: 'スポーツ' },
+    { id: 9, name: '映像' },
+    { id: 10, name: 'テクノロジー' },
+    { id: 11, name: 'ビジネス' },
+    { id: 12, name: '地域活性化' }
+  ]
 
   private isCategoryInvalid () {
-    return (this.$store.getters.category === '')
+    return (this.$store.getters.category === 0)
   }
 
   private lockIfCategoryInvalid () {
     this.$store.commit('setLockedStep', this.isCategoryInvalid())
   }
 
-  private selectedItem (input: string) {
+  private selectedItem (input: number) {
     this.$store.commit('setCategory', input)
     this.lockIfCategoryInvalid()
   }

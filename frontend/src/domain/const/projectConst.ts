@@ -1,9 +1,9 @@
 export default class ProjectConst {
-  static get allOrNothing (): string {
-    return 'All-or-Nothing'
+  static get allOrNothing (): number {
+    return 1
   }
 
-  static get allIn (): string {
-    return 'All-In'
+  static get allIn (): number {
+    return 2
   }
 }

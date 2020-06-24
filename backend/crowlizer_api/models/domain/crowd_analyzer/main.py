@@ -167,6 +167,7 @@ df[cols_to_target_encode] = df[cols_to_target_encode].astype(np.object)
 X_train, X_test, y_train, y_test = train_test_split(df[cols_to_train], df[target_col], random_state=4, test_size=0.1)
 df_train = pd.concat([X_train, y_train], axis=1)
 df_test = pd.concat([X_test, y_test], axis=1)
+
 # target encoding
 kf = KFold(5)
 te = TargetEncoder(kf.split(df_train))

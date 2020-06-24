@@ -2,7 +2,7 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
 from django.http import HttpResponse
-from crowlizer_api.models.infra.abstract_json_dto import AbstractJsonDto
+from crowlizer_api.models.infra.dtos.abstract_json_dto import AbstractJsonDto
 
 
 class Tekito(AbstractJsonDto):

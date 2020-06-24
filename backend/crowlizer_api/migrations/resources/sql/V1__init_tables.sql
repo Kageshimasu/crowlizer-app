@@ -9,6 +9,17 @@ CREATE TABLE category (
     PRIMARY KEY (id)
 );
 
+CREATE TABLE method (
+    id SERIAL NOT NULL,
+    name VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    created_by CHAR(36) NOT NULL DEFAULT 'system',
+    updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_by CHAR(36) NOT NULL DEFAULT 'system',
+    version bigint NOT NULL DEFAULT 0,
+    PRIMARY KEY (id)
+);
+
 INSERT INTO category (name) VALUES
 ('アート'),
 ('音楽'),
@@ -22,3 +33,7 @@ INSERT INTO category (name) VALUES
 ('テクノロジー'),
 ('ビジネス'),
 ('地域活性化');
+
+INSERT INTO method (name) VALUES
+('all-or-nothing'),
+('all-in');

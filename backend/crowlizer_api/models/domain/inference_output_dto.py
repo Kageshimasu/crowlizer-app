@@ -1,4 +1,4 @@
-from ..infra.abstract_json_dto import AbstractJsonDto
+from crowlizer_api.models.infra.dtos.abstract_json_dto import AbstractJsonDto
 
 
 class InferenceOutputDto(AbstractJsonDto):

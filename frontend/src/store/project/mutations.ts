@@ -14,10 +14,10 @@ const mutations: MutationTree<ProjectState> = {
   setTargetAmount: (state, targetAmount: number) => {
     state.projectDto.targetAmount = targetAmount
   },
-  setMethod: (state, method: string) => {
+  setMethod: (state, method: number) => {
     state.projectDto.method = method
   },
-  setCategory: (state, category: string) => {
+  setCategory: (state, category: number) => {
     state.projectDto.category = category
   },
   setTitle: (state, title: string) => {

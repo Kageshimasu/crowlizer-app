@@ -16,8 +16,7 @@ class InferenceView(APIView):
         self._service = InferenceService()
 
     def put(self, request):
-        request_dto = self._converter.json2request(request.data)
-        self._checker.check(request_dto)
-        input_dto = self._converter.request2input(request_dto)
+        input_dto = self._converter.json2input(request.data)
+        self._checker.check(input_dto)
         output_dto = self._service.infer(input_dto)
         return Response(output_dto.to_json(), status.HTTP_200_OK)

@@ -5,7 +5,7 @@ export default class ProjectDto {
   startDate = new Date().toISOString().substr(0, 10)
   endDate = new Date().toISOString().substr(0, 10)
   method = ProjectConst.allOrNothing
-  category = ''
+  category = 0
   title = ''
   description = ''
   numImages = 0

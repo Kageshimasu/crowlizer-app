@@ -45,7 +45,6 @@
 import { Component, Vue } from 'vue-property-decorator'
 import DynamicTab from '@/components/templates/DynamicTab.vue'
 import Stepper from '@/components/molecules/Stepper.vue'
-import ProbabilityPredictionService from '@/domain/probabilityPredictionService'
 
 @Component({
   components: {
@@ -74,7 +73,7 @@ export default class Form extends Vue {
     { id: '6', name: 'SNS', route: '/form/sns' }
   ]
 
-  lastPage = { name: '分析', route: '/' }
+  lastPage = { name: '分析', route: '/result' }
 
   defaultTab = this.tabs[0]
   currentId = this.defaultTab.id
@@ -82,7 +81,6 @@ export default class Form extends Vue {
   isDisabledMovement = false
   steps = this.initStepsFromTabs(this.tabs)
   activeStepOrder = this.steps[0].stepOrder
-  probPredService = ProbabilityPredictionService.instance
 
   private initStepsFromTabs (
     tabs: {id: string; name: string; route: string}[]) {
@@ -130,7 +128,6 @@ export default class Form extends Vue {
       const nextId = this.getNextId()
       return this.tabs.filter(v => v.id === nextId)[0].route
     }
-    this.probPredService.predictProbability(this.$store.getters.projectObject)
     return this.lastPage.route
   }
 
