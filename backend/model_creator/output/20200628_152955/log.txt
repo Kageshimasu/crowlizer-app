@@ -1,0 +1,18 @@
+failed to load file: metrics.json
+failed to load file: params.json
+Algorithm: lgbm
+Experiment: output/20200628_152955
+Params: {'metric': 'rmse', 'objective': 'regression', 'n_estimators': 512, 'max_depth': -1}
+Features: ['target_amount', 'method', 'category', 'images', 'twitter_existence', 'twitter_friends', 'twitter_followers', 'facebook_existence', 'instagram_existence', 'web_page_existence', 'period', 'start_date_day', 'title_len', 'description_len']
+Categorical: []
+Fold 0 score: 2.223788878800489
+0.058 sec / fold
+Fold 1 score: 2.2753839264961186
+0.067 sec / fold
+Fold 2 score: 1.7473972957882746
+0.063 sec / fold
+Fold 3 score: 2.2435047909328723
+0.060 sec / fold
+Fold 4 score: 2.1498159898156897
+0.077 sec / fold
+Overall score: 2.1280875493146727

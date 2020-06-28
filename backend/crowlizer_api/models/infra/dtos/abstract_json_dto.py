@@ -24,4 +24,8 @@ class AbstractJsonDto(metaclass=ABCMeta):
         return self.__dict__
 
     def to_df(self) -> pd.DataFrame:
-        return pd.DataFrame(self.__dict__)
+        df = {}
+        self_dict = self.to_json()
+        for key in self_dict.keys():
+            df[key] = [self_dict[key]]
+        return pd.DataFrame(df)

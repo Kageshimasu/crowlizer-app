@@ -1,0 +1,6 @@
+failed to load file: metrics.json
+failed to load file: params.json
+Algorithm: lgbm
+Experiment: output/20200628_152638
+Params: {'metric': 'rmse', 'objective': 'regression', 'n_estimators': 512, 'max_depth': -1}
+Features: ['target_amount', 'method', 'category', 'images', 'twitter_existence', 'twitter_friends', 'twitter_followers', 'facebook_existence', 'instagram_existence', 'web_page_existence', 'period', 'start_date_day', 'title_len', 'description_len']

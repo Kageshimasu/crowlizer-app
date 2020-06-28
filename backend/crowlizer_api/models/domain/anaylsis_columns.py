@@ -1,56 +1,76 @@
 from enum import Enum
 from typing import List
 
+
 class AnalysisColumns(Enum):
-    TO_ANALYZE_SUCCESS_PROB = [
-        'target_amount',
-        'method',
-        'category',
-        'images',
-        'twitter_existence',
-        'twitter_friends',
-        'twitter_followers',
-        'facebook_existence',
-        'instagram_existence',
-        'web_page_existence',
-        'period',
-        'start_date_day',
-        'title_len',
-        'description_len'
+    TARGET_AMOUNT = 'targetAmount'
+    METHOD = 'method'
+    CATEGORY = 'category'
+    IMAGES = 'numImages'
+    VIDEOS = 'numVideos'
+    TWITTER_EXISTENCE = 'twitterExistence'
+    TWITTER_FRIENDS = 'twitterFriends'
+    TWITTER_FOLLOWERS = 'twitterFollowers'
+    FACEBOOK_EXISTENCE = 'facebookExistence'
+    INSTAGRAM_EXISTENCE = 'instagramExistence'
+    WEB_PAGE_EXISTENCE = 'webPageExistence'
+    PERIOD = 'period'
+    TITLE = 'title'
+    TITLE_LEN = 'titleLen'
+    DESCRIPTION = 'description'
+    DESCRIPTION_LEN = 'descriptionLen'
+    START_DATE = 'startDate'
+    START_DATE_DAY = 'startDateDay'
+    END_DATE = 'endDate'
+
+    SUCCESS_PROB_COLS = [
+        TARGET_AMOUNT,
+        METHOD,
+        CATEGORY,
+        IMAGES,
+        TWITTER_EXISTENCE,
+        TWITTER_FRIENDS,
+        TWITTER_FOLLOWERS,
+        FACEBOOK_EXISTENCE,
+        INSTAGRAM_EXISTENCE,
+        WEB_PAGE_EXISTENCE,
+        PERIOD,
+        START_DATE_DAY,
+        TITLE_LEN,
+        DESCRIPTION_LEN
     ]
-    TO_ANALYZE_TARGET_AMOUNT = [
-        'method',
-        'category',
-        'images',
-        'twitter_existence',
-        'twitter_friends',
-        'twitter_followers',
-        'facebook_existence',
-        'instagram_existence',
-        'web_page_existence',
-        'period',
-        'start_date_day',
-        'title_len',
-        'description_len'
+    TARGET_AMOUNT_COLS = [
+        TARGET_AMOUNT,
+        METHOD,
+        CATEGORY,
+        IMAGES,
+        TWITTER_EXISTENCE,
+        TWITTER_FRIENDS,
+        TWITTER_FOLLOWERS,
+        FACEBOOK_EXISTENCE,
+        INSTAGRAM_EXISTENCE,
+        WEB_PAGE_EXISTENCE,
+        PERIOD,
+        START_DATE_DAY,
+        TITLE_LEN,
+        DESCRIPTION_LEN
     ]
-    TO_ENCODE = [
-        'category',
-        'method',
+    ENCODED_COLS = [
+        CATEGORY,
+        METHOD
     ]
-    TO_TAKE_LOG = [
-        'target_amount',
-        'twitter_followers',
-        'twitter_friends'
+    LOG_TAKEN_COLS = [
+        TARGET_AMOUNT,
+        TWITTER_FOLLOWERS,
+        TWITTER_FRIENDS
     ]
-    START_DATE = 'start_date'
-    END_DATE = 'end_date'
-    OF_DATE = [
+    DATE_COLS = [
         START_DATE,
         END_DATE
     ]
-    OF_TEXT = [
-        'title',
-        'description'
+    TEXT_COLS = [
+        TITLE,
+        DESCRIPTION
     ]
 
     def str(self) -> str:
