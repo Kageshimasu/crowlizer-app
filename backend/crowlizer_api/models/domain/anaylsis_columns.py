@@ -19,6 +19,7 @@ class AnalysisColumns(Enum):
     TITLE_LEN = 'titleLen'
     DESCRIPTION = 'description'
     DESCRIPTION_LEN = 'descriptionLen'
+    TITLE_DESCRIPTION = 'title_description'
     START_DATE = 'startDate'
     START_DATE_DAY = 'startDateDay'
     END_DATE = 'endDate'
@@ -28,32 +29,16 @@ class AnalysisColumns(Enum):
         METHOD,
         CATEGORY,
         IMAGES,
-        TWITTER_EXISTENCE,
         TWITTER_FRIENDS,
         TWITTER_FOLLOWERS,
-        FACEBOOK_EXISTENCE,
-        INSTAGRAM_EXISTENCE,
-        WEB_PAGE_EXISTENCE,
-        PERIOD,
-        START_DATE_DAY,
-        TITLE_LEN,
-        DESCRIPTION_LEN
     ]
     TARGET_AMOUNT_COLS = [
         TARGET_AMOUNT,
         METHOD,
         CATEGORY,
         IMAGES,
-        TWITTER_EXISTENCE,
         TWITTER_FRIENDS,
         TWITTER_FOLLOWERS,
-        FACEBOOK_EXISTENCE,
-        INSTAGRAM_EXISTENCE,
-        WEB_PAGE_EXISTENCE,
-        PERIOD,
-        START_DATE_DAY,
-        TITLE_LEN,
-        DESCRIPTION_LEN
     ]
     ENCODED_COLS = [
         CATEGORY,
@@ -87,6 +72,8 @@ class AnalysisColumns(Enum):
 
     def extend(self, new_list: list):
         self._check_type_error('extend', list)
+        if set(new_list) & set(self.value):
+            return self.value
         self.value.extend(new_list)
         return self.value
 

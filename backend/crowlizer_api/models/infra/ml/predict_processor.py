@@ -25,11 +25,12 @@ class PredictProcessor:
 
     def predict(self, df: pd.DataFrame) -> np.ndarray:
         logits = []
+        print('START PREDICTING...')
         for model in self._trained_models:
             if self._objective == 'binary':
                 logit = model.predict_proba(df)[:, 1]
             elif self._objective == 'continuous':
-                logit = np.exp(model.predict(df))
+                logit = np.expm1(model.predict(df))
             else:
                 raise ValueError('Objective must be multiclass or regression but got {}'.format(self._objective))
             logits.append(logit)

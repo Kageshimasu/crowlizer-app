@@ -16,19 +16,20 @@ class InferenceService:
         classifier_paths = InferenceRepositoy.get_classifier_paths()
         regressor_paths = InferenceRepositoy.get_regressor_paths()
 
+        # 特徴量ちゅしゅつ
         df = CategoryEncodingProcessor.encode_with_load(encoder_path, df, AnalysisColumns.ENCODED_COLS.list())
         df = PreProcessor.take_logarithm_of(df, AnalysisColumns.LOG_TAKEN_COLS.list())
         df = InferenceProcessor.extract_features(df)
 
-        # 7. 成功確率の推論
+        # 成功確率の推論
         success_prob = InferenceProcessor.predict(
             df, classifier_paths, 'binary', AnalysisColumns.SUCCESS_PROB_COLS.list())
 
-        # 8. 目標金額の推論
+        # 目標金額の推論
         target_amount_est = InferenceProcessor.predict(
             df, regressor_paths, 'continuous', AnalysisColumns.TARGET_AMOUNT_COLS.list())
 
-        # 7. 結果返却
+        # 結果返却
         output_dto = InferenceOutputDto()
         output_dto.predicted_success_prob = success_prob
         output_dto.predicted_target_amount = target_amount_est

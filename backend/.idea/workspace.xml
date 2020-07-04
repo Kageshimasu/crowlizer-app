@@ -2,34 +2,36 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="016624e2-85ca-46af-8805-12462cf1a626" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/crowlizer_api/models/domain/inference_processor.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crowlizer_api/models/domain/inference_repository.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crowlizer_api/models/infra/ml/predict_processor.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crowlizer_api/tests/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crowlizer_api/tests/test_inference_request_checker.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crowlizer_api/tests/test_inference_service.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model_creator/regressor_main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model_creator/bagofwords_vectorizer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model_creator/tfidf_vectorizer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crowlizer_api/models/app/inference_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/crowlizer_api/models/app/inference_service.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crowlizer_api/models/domain/anaylsis_columns.py" beforeDir="false" afterPath="$PROJECT_DIR$/crowlizer_api/models/domain/anaylsis_columns.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crowlizer_api/models/domain/crowd_analyzer/.idea/analyzer.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crowlizer_api/models/domain/crowd_analyzer/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crowlizer_api/models/domain/crowd_analyzer/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crowlizer_api/models/domain/crowd_analyzer/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crowlizer_api/models/domain/crowd_analyzer/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crowlizer_api/models/domain/crowd_analyzer/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crowlizer_api/models/domain/crowd_analyzer/main.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crowlizer_api/models/domain/crowd_analyzer/model/base_model.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crowlizer_api/models/domain/crowd_analyzer/model/lightgbm.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crowlizer_api/models/domain/crowd_analyzer/nlp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crowlizer_api/models/domain/crowd_analyzer/requirements.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crowlizer_api/models/domain/crowd_analyzer/stop_words.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crowlizer_api/models/infra/dtos/abstract_json_dto.py" beforeDir="false" afterPath="$PROJECT_DIR$/crowlizer_api/models/infra/dtos/abstract_json_dto.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crowlizer_api/models/infra/ml/category_encoding_processor.py" beforeDir="false" afterPath="$PROJECT_DIR$/crowlizer_api/models/infra/ml/category_encoding_processor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crowlizer_api/models/infra/ml/feature_engineering_processor.py" beforeDir="false" afterPath="$PROJECT_DIR$/crowlizer_api/models/infra/ml/feature_engineering_processor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crowlizer_api/models/domain/inference_processor.py" beforeDir="false" afterPath="$PROJECT_DIR$/crowlizer_api/models/domain/inference_processor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crowlizer_api/models/domain/inference_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/crowlizer_api/models/domain/inference_repository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crowlizer_api/models/infra/ml/nl_processor.py" beforeDir="false" afterPath="$PROJECT_DIR$/crowlizer_api/models/infra/ml/nl_processor.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crowlizer_api/models/infra/ml/pre_processor.py" beforeDir="false" afterPath="$PROJECT_DIR$/crowlizer_api/models/infra/ml/pre_processor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crowlizer_api/views/inference_request_checker.py" beforeDir="false" afterPath="$PROJECT_DIR$/crowlizer_api/views/inference_request_checker.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crowlizer_api/views/test_view.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/crowlizer_api/models/infra/ml/predict_processor.py" beforeDir="false" afterPath="$PROJECT_DIR$/crowlizer_api/models/infra/ml/predict_processor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model_creator/classifier_main.py" beforeDir="false" afterPath="$PROJECT_DIR$/model_creator/classifier_main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model_creator/nlp/preprocessings/ja/cleaning.py" beforeDir="false" afterPath="$PROJECT_DIR$/model_creator/nlp/preprocessings/ja/cleaning.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model_creator/nlp/preprocessings/ja/stopwords.py" beforeDir="false" afterPath="$PROJECT_DIR$/model_creator/nlp/preprocessings/ja/stopwords.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model_creator/regressor_main.py" beforeDir="false" afterPath="$PROJECT_DIR$/model_creator/regressor_main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/encoders/target_encoding.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/resources/encoders/target_encoding.pkl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ml_models/classifier/model_0.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ml_models/classifier/model_0.pkl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ml_models/classifier/model_1.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ml_models/classifier/model_1.pkl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ml_models/classifier/model_2.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ml_models/classifier/model_2.pkl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ml_models/classifier/model_3.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ml_models/classifier/model_3.pkl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ml_models/classifier/model_4.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ml_models/classifier/model_4.pkl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ml_models/regressor/model_0.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ml_models/regressor/model_0.pkl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ml_models/regressor/model_1.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ml_models/regressor/model_1.pkl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ml_models/regressor/model_2.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ml_models/regressor/model_2.pkl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ml_models/regressor/model_3.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ml_models/regressor/model_3.pkl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ml_models/regressor/model_4.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/resources/ml_models/regressor/model_4.pkl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/organisms/Result.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/organisms/Result.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/pages/Form.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/pages/Form.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/main-styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/main-styles.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -51,16 +53,16 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/crowlizer_api/tests" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/model_creator" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Kageshimasu\Desktop\web_app\crowlizer\backend\model_creator" />
       <recent name="C:\Users\Kageshimasu\Desktop\web_app\crowlizer\backend\crowlizer_api\tests" />
       <recent name="C:\Users\Kageshimasu\Desktop\web_app\crowlizer\backend\crowd_analyzer" />
       <recent name="C:\Users\Kageshimasu\Desktop\web_app\crowlizer\backend\crowlizer_api\models\domain" />
       <recent name="C:\Users\Kageshimasu\Desktop\web_app\crowlizer\backend\crowlizer_api\models\infra\ml" />
-      <recent name="C:\Users\Kageshimasu\Desktop\web_app\crowlizer\backend\crowlizer_api\models\domain\crowd_analyzer\model" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Kageshimasu\Desktop\web_app\crowlizer\backend\crowlizer_api\tests" />
@@ -82,8 +84,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.pytest in test_inference_request_checker.py">
-    <configuration name="inference" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.classifier_main">
+    <configuration name="classifier_main" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="backend" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -91,11 +93,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/crowlizer_api/tests" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/model_creator" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\Kageshimasu\Desktop\web_app\crowlizer\backend\crowlizer_api\tests\test_inference_service.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/model_creator/classifier_main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -104,7 +106,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="inference_service" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="backend" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -112,11 +114,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/crowlizer_api/models/app" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/model_creator" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/crowlizer_api/models/app/inference_service.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\Kageshimasu\Desktop\web_app\crowlizer\backend\model_creator\regressor_main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -154,11 +156,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/crowd_analyzer" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/model_creator" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/crowd_analyzer/regressor_main.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/model_creator/regressor_main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -199,11 +201,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.pytest in test_inference_request_checker.py" />
-        <item itemvalue="Python tests.pytest in test_inference_service.py" />
-        <item itemvalue="Python.inference" />
+        <item itemvalue="Python.classifier_main" />
         <item itemvalue="Python.regressor_main" />
-        <item itemvalue="Python.inference_service" />
+        <item itemvalue="Python tests.pytest in test_inference_service.py" />
+        <item itemvalue="Python.main" />
+        <item itemvalue="Python tests.pytest in test_inference_request_checker.py" />
       </list>
     </recent_temporary>
   </component>

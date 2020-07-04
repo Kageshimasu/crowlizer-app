@@ -38,6 +38,9 @@
         {{getNextButtonName()}}に進む
       </v-btn>
     </div>
+    <div class="copy-right">
+      <small>&copy; 2020 Kageshimasu.</small>
+    </div>
   </div>
 </template>
 
@@ -181,4 +184,13 @@ export default class Form extends Vue {
 
 <style>
 @import "../../main-styles.css";
+
+.copy-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 50px;
+    margin: 5px;
+}
 </style>

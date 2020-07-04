@@ -44,5 +44,4 @@ def get_stop_words(docs, n=100, min_freq=1):
     common_words = {word for word, freq in fdist.most_common(n)}
     rare_words = {word for word, freq in fdist.items() if freq <= min_freq}
     stopwords = common_words.union(rare_words)
-    print('{}/{}'.format(len(stopwords), len(fdist)))
     return stopwords

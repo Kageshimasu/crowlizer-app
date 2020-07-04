@@ -1,0 +1,18 @@
+failed to load file: metrics.json
+failed to load file: params.json
+Algorithm: lgbm
+Experiment: output/20200704_150409
+Params: {'n_estimators': 512, 'max_depth': -1}
+Features: ['target_amount', 'method', 'category', 'images', 'videos', 'twitter_friends', 'twitter_followers', 'period', 'tfidf-sum']
+Categorical: []
+Fold 0 score: 0.7405822935234699
+0.181 sec / fold
+Fold 1 score: 0.7576190476190475
+0.144 sec / fold
+Fold 2 score: 0.667612293144208
+0.171 sec / fold
+Fold 3 score: 0.6767485822306238
+0.154 sec / fold
+Fold 4 score: 0.7011452682338758
+0.159 sec / fold
+Overall score: 0.7078805636153307

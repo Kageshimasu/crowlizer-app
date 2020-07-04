@@ -1,0 +1,9 @@
+{
+  "algorithm_type": "lgbm",
+  "num_features": 9,
+  "fit_params": "None",
+  "model_params.n_estimators": 512,
+  "model_params.max_depth": -1,
+  "model_params_tuned": "{'n_estimators': 512, 'max_depth': -1, 'lambda_l1': 0.22376540078648444, 'lambda_l2': 0.03687434267593975, 'num_leaves': 3, 'feature_fraction': 0.92, 'bagging_fraction': 0.9773779096032695, 'bagging_freq': 6, 'min_child_samples': 5, 'early_stopping_rounds': 100, 'num_iterations': 512, 'objective': 'binary', 'metric': 'binary_logloss', 'verbosity': -1}",
+  "categorical_feature": "[]"
+}

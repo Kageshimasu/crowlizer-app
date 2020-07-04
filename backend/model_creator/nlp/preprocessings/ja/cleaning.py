@@ -1,17 +1,26 @@
 # -*- coding: utf-8 -*-
 import re
-
+import string
+from ...unicode_script.unicode_script_map import get_script_type
+from ...unicode_script.unicode_script import ScriptType
 from bs4 import BeautifulSoup
+
+SYMBOL_REGEX = re.compile('[!"#$%&\'\\\\()*+,-./:;<=>?@[\\]^_`{|}~「」〔〕“”〈〉『』【】＆＊・（）＄＃＠。、？！｀＋￥％]')
 
 
 def clean_text(text):
     replaced_text = text.lower()
-    replaced_text = re.sub(r'[【】]', ' ', replaced_text)       # 【】の除去
-    replaced_text = re.sub(r'[（）()]', ' ', replaced_text)     # （）の除去
-    replaced_text = re.sub(r'[［］\[\]]', ' ', replaced_text)   # ［］の除去
+    replaced_text = SYMBOL_REGEX.sub('', replaced_text)
+    replaced_text = re.sub(r'[【】]', ' ', replaced_text)  # 【】の除去
+    replaced_text = re.sub(r'[（）()]', ' ', replaced_text)  # （）の除去
+    replaced_text = re.sub(r'[［］\[\]]', ' ', replaced_text)  # ［］の除去
     replaced_text = re.sub(r'[@＠]\w+', '', replaced_text)  # メンションの除去
     replaced_text = re.sub(r'https?:\/\/.*?[\r\n ]', '', replaced_text)  # URLの除去
     replaced_text = re.sub(r'　', ' ', replaced_text)  # 全角空白の除去
+    replaced_text = re.sub(r'[!-~]', "", replaced_text)  # 半角記号,数字,英字
+    replaced_text = re.sub(r'[︰-＠]', "", replaced_text)  # 全角記号
+    replaced_text = re.sub(r'https?://[\w/:%#\$&\?\(\)~\.=\+\-…]+', "", replaced_text)
+    replaced_text = "".join([c for c in replaced_text if get_script_type(c) != ScriptType.U_Common])
     return replaced_text
 
 
