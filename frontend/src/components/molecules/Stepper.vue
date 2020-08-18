@@ -36,5 +36,5 @@ export default class Stepper extends Vue {
 </script>
 
 <style>
-@import "../../main-styles.css";
+@import "../../css/main-styles.css";
 </style>

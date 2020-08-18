@@ -43,7 +43,7 @@ export default class Description extends Vue {
 </script>
 
 <style>
-@import "../../main-styles.css";
+@import "../../css/main-styles.css";
 
 .description-form {
   width: 500px

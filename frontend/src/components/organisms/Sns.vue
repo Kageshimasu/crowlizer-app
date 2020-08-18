@@ -115,7 +115,7 @@ export default class Sns extends Vue {
 </script>
 
 <style>
-@import "../../main-styles.css";
+@import "../../css/main-styles.css";
 
 .sns-form {
   height: 200px;

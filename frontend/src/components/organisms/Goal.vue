@@ -66,7 +66,7 @@ export default class Goal extends Vue {
 </script>
 
 <style>
-@import "../../main-styles.css";
+@import "../../css/main-styles.css";
 
 .target-amount-form {
   width: 400px

@@ -1,6 +1,6 @@
 import ProjectConst from '@/domain/const/projectConst'
 
-export default class ProjectDto {
+export default class ProjectDto extends Object {
   targetAmount = 0
   startDate = new Date().toISOString().substr(0, 10)
   endDate = new Date().toISOString().substr(0, 10)
@@ -16,4 +16,14 @@ export default class ProjectDto {
   facebookExistence = false
   instagramExistence = false
   webpageExistence = false
+
+  equals (projectDto: ProjectDto) {
+    const memberList = Object.getOwnPropertyNames(projectDto)
+    for (const val of memberList) {
+      if ((this as any)[val] !== (projectDto as any)[val]) {
+        return false
+      }
+    }
+    return true
+  }
 }

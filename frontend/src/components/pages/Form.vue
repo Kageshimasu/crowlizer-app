@@ -172,18 +172,26 @@ export default class Form extends Vue {
     this.isDisabledMovement = this.$store.getters.targetAmount === 0
   }
 
+  onBeforeunloadHandler (evt: BeforeUnloadEvent): void {
+    evt.returnValue = '編集中の内容は失われます。'
+  }
+
   mounted () {
-    // Defaultタブに直す
+    window.addEventListener('beforeunload', this.onBeforeunloadHandler, false)
     if (this.$route.path !== this.defaultTab.route) {
       this.$router.push({ path: this.defaultTab.route })
     }
     this.reset()
   }
+
+  beforeDestroy () {
+    window.removeEventListener('beforeunload', this.onBeforeunloadHandler, false)
+  }
 }
 </script>
 
 <style>
-@import "../../main-styles.css";
+@import "../../css/main-styles.css";
 
 .copy-right {
     display: flex;

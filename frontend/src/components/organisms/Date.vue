@@ -107,7 +107,7 @@ export default class Date extends Vue {
 </script>
 
 <style>
-@import "../../main-styles.css";
+@import "../../css/main-styles.css";
 
 .target-amount-form {
   width: 600px

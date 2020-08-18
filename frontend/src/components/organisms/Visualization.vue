@@ -51,7 +51,7 @@ export default class Visualization extends Vue {
 </script>
 
 <style>
-@import "../../main-styles.css";
+@import "../../css/main-styles.css";
 
 .visualization-form {
   width: 400px

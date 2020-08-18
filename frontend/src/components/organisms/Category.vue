@@ -66,7 +66,7 @@ export default class Category extends Vue {
 </script>
 
 <style>
-@import "../../main-styles.css";
+@import "../../css/main-styles.css";
 
 .title-margin {
   margin-bottom: 50px

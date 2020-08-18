@@ -71,5 +71,5 @@ export default class Methods extends Vue {
 </script>
 
 <style>
-@import "../../main-styles.css";
+@import "../../css/main-styles.css";
 </style>

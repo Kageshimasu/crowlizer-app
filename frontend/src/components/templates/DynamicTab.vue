@@ -66,7 +66,7 @@ export default class ProjectEditor extends Vue {
 </script>
 
 <style>
-@import "../../main-styles.css";
+@import "../../css/main-styles.css";
 
 .f-container {
   display: flex;

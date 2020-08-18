@@ -37,7 +37,7 @@ export default class App extends Vue {
 </script>
 
 <style>
-@import "main-styles.css";
+@import "/css/main-styles.css";
 
 .center{
   margin-left: auto;
