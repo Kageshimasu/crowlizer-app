@@ -1,4 +1,4 @@
-# krowlizer
+# Crowlizer
 
 ## Project setup
 ```
