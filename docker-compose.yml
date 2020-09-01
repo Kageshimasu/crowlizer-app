@@ -1,29 +1,52 @@
 version: "3.7"
 services:
 
-  dbms:
-    image: postgres
-    environment:
-      TZ: Asia/Tokyo
-      POSTGRES_USER: Kageshimasu
-      POSTGRES_PASSWORD: sr87ojav
-      POSTGRES_DB: crowlizer_db
-    healthcheck:
-      test: ["CMD-SHELL", "pg_isready -d postgres -U postgres"]
-      interval: 10s
-      timeout: 10s
-      retries: 5
-    ports:
-      - 5432:5432
+  # dbms:
+  #   image: postgres
+  #   environment:
+  #     TZ: Asia/Tokyo
+  #     POSTGRES_USER: Kageshimasu
+  #     POSTGRES_PASSWORD: sr87ojav
+  #     POSTGRES_DB: crowlizer_db
+  #   healthcheck:
+  #     test: ["CMD-SHELL", "pg_isready -d postgres -U postgres"]
+  #     interval: 10s
+  #     timeout: 10s
+  #     retries: 5
+  #   ports:
+  #     - 5432:5432
 
-  admin:
-      image: dockage/phppgadmin
-      depends_on: 
-        - dbms
-      # volumes:
-      #   - ./.postgres/database:/usr/share/phppgadmin/classes/database
-      environment: 
-        PHP_PG_ADMIN_SERVER_HOST: dbms
-        PHP_PG_ADMIN_SERVER_DEFAULT_DB: crowlizer_db
-      ports:
-        - 9000:80
+  # admin:
+  #     image: dockage/phppgadmin
+  #     depends_on: 
+  #       - dbms
+  #     # volumes:
+  #     #   - ./.postgres/database:/usr/share/phppgadmin/classes/database
+  #     environment: 
+  #       PHP_PG_ADMIN_SERVER_HOST: dbms
+  #       PHP_PG_ADMIN_SERVER_DEFAULT_DB: crowlizer_db
+  #     ports:
+  #       - 9000:80
+
+  web:
+    # image: django
+    build: ./backend/django
+    command: python manage.py runserver 0.0.0.0:8000
+    # volumes:
+    ports:
+      - 8181:8000
+    stdin_open: true
+    # depends_on:
+    #   - dbms
+
+  # nginx:
+  #   image: nginx:alpine
+  #   container_name: nginx
+  #   ports:
+  #     - 8080:8000
+  #   volumes:
+  #     - ./backend/nginx/conf:/etc/nginx/conf.d
+  #     - ./backend/nginx/uwsgi_params:/etc/nginx/uwsgi_params
+  #     - ./backend/django/static:/static
+  #   depends_on:
+  #     - web
