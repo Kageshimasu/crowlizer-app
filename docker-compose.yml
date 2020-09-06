@@ -1,52 +1,54 @@
 version: "3.7"
 services:
 
-  # dbms:
-  #   image: postgres
-  #   environment:
-  #     TZ: Asia/Tokyo
-  #     POSTGRES_USER: Kageshimasu
-  #     POSTGRES_PASSWORD: sr87ojav
-  #     POSTGRES_DB: crowlizer_db
-  #   healthcheck:
-  #     test: ["CMD-SHELL", "pg_isready -d postgres -U postgres"]
-  #     interval: 10s
-  #     timeout: 10s
-  #     retries: 5
-  #   ports:
-  #     - 5432:5432
-
-  # admin:
-  #     image: dockage/phppgadmin
-  #     depends_on: 
-  #       - dbms
-  #     # volumes:
-  #     #   - ./.postgres/database:/usr/share/phppgadmin/classes/database
-  #     environment: 
-  #       PHP_PG_ADMIN_SERVER_HOST: dbms
-  #       PHP_PG_ADMIN_SERVER_DEFAULT_DB: crowlizer_db
-  #     ports:
-  #       - 9000:80
-
-  web:
-    # image: django
-    build: ./backend/django
-    command: python manage.py runserver 0.0.0.0:8000
-    # volumes:
+  db:
+    image: postgres:12.4
+    environment:
+      TZ: Asia/Tokyo
+      POSTGRES_USER: Kageshimasu
+      POSTGRES_PASSWORD: Kageshimasu
+      POSTGRES_DB: crowlizer_db
     ports:
-      - 8181:8000
-    stdin_open: true
-    # depends_on:
-    #   - dbms
+      - 5432:5432
 
-  # nginx:
-  #   image: nginx:alpine
-  #   container_name: nginx
+  admin:
+      image: dockage/phppgadmin
+      depends_on: 
+        - db
+      environment: 
+        PHP_PG_ADMIN_SERVER_HOST: db
+        PHP_PG_ADMIN_SERVER_DEFAULT_DB: crowlizer_db
+      ports:
+        - 9000:80
+
+  django:
+    build: ./backend/django
+    command: bash -c "python manage.py migrate && uwsgi --socket :8001 --module crowlizer_api.wsgi"
+    # bash -c "python manage.py migrate && uwsgi --http :8001 --module crowlizer_api.wsgi"
+    # bash -c "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
+    # ports:
+    #   - 8001:8000
+    expose:
+      - "8001"
+    stdin_open: true
+    depends_on:
+      - db
+  
+  # web:
+  #   build: ./frontend/
+  #   command: npm run serve
   #   ports:
-  #     - 8080:8000
-  #   volumes:
-  #     - ./backend/nginx/conf:/etc/nginx/conf.d
-  #     - ./backend/nginx/uwsgi_params:/etc/nginx/uwsgi_params
-  #     - ./backend/django/static:/static
+  #     - 8080:8080
   #   depends_on:
-  #     - web
+  #     - django
+
+  nginx:
+    image: nginx:1.13
+    container_name: nginx
+    ports:
+      - 8000:8000
+    volumes:
+      - ./backend/nginx/conf:/etc/nginx/conf.d
+      - ./backend/nginx/uwsgi_params:/etc/nginx/uwsgi_params
+    depends_on:
+      - django

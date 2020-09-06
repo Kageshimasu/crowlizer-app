@@ -17,8 +17,6 @@ from crowlizer_api.apps import CrowlizerApiConfig
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'g2$b@mez^q!&4mq4ga3jwuf$xhfza@a7^oa&09f-@+z*f+0vnt'
@@ -86,8 +84,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'crowlizer_db',
         'USER': 'Kageshimasu',
-        'PASSWORD': 'sr87ojav',
-        'HOST': '127.0.0.1',
+        'PASSWORD': 'Kageshimasu',
+        'HOST': 'crowlizer_db_1',
         'PORT': '5432',
     }
 }

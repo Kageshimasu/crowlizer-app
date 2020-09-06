@@ -5,7 +5,7 @@
         Welcome to {{title}}
       </h1>
       <p class="subheading font-weight-regular text-center">
-        Crowlizer is a web application which predicts your project's feature<br>
+        Crowlizer is a web application which predicts your project's future<br>
         Click the button below to try this.
       </p>
       <p class="flex-center-container">

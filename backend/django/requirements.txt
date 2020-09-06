@@ -6,3 +6,8 @@ djangorestframework==3.11.0
 django-cors-headers==3.3.0
 psycopg2==2.8.5
 pandas==0.25.3
+uwsgi==2.0.18
+nyaggle==0.1.3
+mecab-python3==0.996.2
+beautifulsoup4==4.9.1
+lightgbm==2.3.1

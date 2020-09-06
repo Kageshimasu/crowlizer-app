@@ -1,59 +1,71 @@
 <template>
   <div class="result-form result-flex-container">
-    <slot v-if="!isVisibleTargetAmount">
-      <div :class="{fadeOut: !isVisibleTargetAmount}">
-        <transition-group class="result-form result-flex-container" name="fade" @after-leave="switchShowSuccessProb">
-          <h1
-          key='prob'
-          class="result-text display-1 mb-3 text-center"
-          v-if="showSuccessProb"
-          style="flex-grow: 3;"
-          >
-            The success probability of your project would be<br><br>
-            <font class="display-2 font-weight-bold red-text">
-              {{(this.successProb * 100).toFixed(2)}}
-            </font>%
-          </h1>
-          <v-progress-circular
-            key="circular"
-            :size="70"
-            :width="7"
-            color="#c52b2d"
-            v-if="indeterminate"
-            indeterminate
-          ></v-progress-circular>
-          <h2
-          key="scroll-text"
-          class="scroll-down-style mb-3 text-center"
-          style="flex-grow: 3;"
-          v-if="showSuccessProb"
-          >
-            <!-- Scroll Down to see your project's value -->
-          </h2>
-        </transition-group>
-      </div>
+    <slot v-if="!failedConnection">
+      <slot v-if="!isVisibleTargetAmount">
+        <div :class="{fadeOut: !isVisibleTargetAmount}">
+          <transition-group class="result-form result-flex-container" name="fade" @after-leave="switchShowSuccessProb">
+            <h1
+            key='prob'
+            class="result-text display-1 mb-3 text-center"
+            v-if="showSuccessProb"
+            style="flex-grow: 3;"
+            >
+              The success probability of your project would be<br><br>
+              <font class="display-2 font-weight-bold red-text">
+                {{(this.successProb * 100).toFixed(2)}}
+              </font>%
+            </h1>
+            <v-progress-circular
+              key="circular"
+              :size="70"
+              :width="7"
+              color="#c52b2d"
+              v-if="indeterminate"
+              indeterminate
+            ></v-progress-circular>
+            <h2
+            key="scroll-text"
+            class="scroll-down-style mb-3 text-center"
+            style="flex-grow: 3;"
+            v-if="showSuccessProb"
+            >
+              <!-- Scroll Down to see your project's value -->
+            </h2>
+          </transition-group>
+        </div>
+      </slot>
+      <slot v-if="isVisibleTargetAmount">
+        <div :class="{fadeIn: isVisibleTargetAmount}">
+
+            <h1
+            key='prob'
+            class="result-text display-1 mb-3 text-center"
+            v-if="showSuccessProb"
+            >
+              I think your project would be worth <br><br>
+              <font class="display-2 font-weight-bold red-text">
+                {{targetEst}}</font> yen
+            </h1>
+
+            <v-progress-circular
+              key="circular"
+              :size="70"
+              :width="7"
+              color="#c52b2d"
+              v-if="indeterminate"
+              indeterminate
+            ></v-progress-circular>
+        </div>
+      </slot>
     </slot>
-    <slot v-if="isVisibleTargetAmount">
-      <div :class="{fadeIn: isVisibleTargetAmount}">
-
-          <h1
-          key='prob'
-          class="result-text display-1 mb-3 text-center"
-          v-if="showSuccessProb"
-          >
-            I think your project would be worth <br><br>
-            <font class="display-2 font-weight-bold red-text">
-              {{targetEst}}</font> yen
-          </h1>
-
-          <v-progress-circular
-            key="circular"
-            :size="70"
-            :width="7"
-            color="#c52b2d"
-            v-if="indeterminate"
-            indeterminate
-          ></v-progress-circular>
+    <slot v-if="failedConnection">
+      <div class="flex-center-container">
+        <h1
+        class="result-text display-1 mb-3 text-center"
+        >
+        Sorry :( <br>
+        <font class="display-1 font-weight-bold red-text">Failed</font> to Connect the server
+        </h1>
       </div>
     </slot>
   </div>
@@ -73,6 +85,7 @@ export default class Result extends Vue {
   scrollY = 0
   isVisibleTargetAmount = false
   enabledWhenUnloadConfirm = false
+  failedConnection = false
 
   private switchShowSuccessProb () {
     this.showSuccessProb = true
@@ -107,6 +120,7 @@ export default class Result extends Vue {
     }).catch((error: Error) => {
       console.log('failed')
       console.log(error)
+      this.failedConnection = true
     }).finally(() => {
       this.indeterminate = false
     })

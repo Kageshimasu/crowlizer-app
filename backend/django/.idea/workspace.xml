@@ -2,20 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="016624e2-85ca-46af-8805-12462cf1a626" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/components/molecules/Stepper.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/molecules/Stepper.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/components/organisms/Category.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/organisms/Category.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/components/organisms/Date.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/organisms/Date.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/components/organisms/Description.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/organisms/Description.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/components/organisms/Goal.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/organisms/Goal.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/components/organisms/Methods.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/organisms/Methods.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/components/organisms/Result.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/organisms/Result.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/components/organisms/Sns.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/organisms/Sns.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/components/organisms/Visualization.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/organisms/Visualization.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/components/pages/Form.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/pages/Form.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/components/templates/DynamicTab.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/templates/DynamicTab.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/main-styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../../docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/src/components/organisms/Result.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/src/components/organisms/Result.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/src/components/pages/About.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/src/components/pages/About.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/src/components/pages/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/src/components/pages/Home.vue" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,7 +21,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="ProjectId" id="1ccs9pKFXkDtqoHCbnYTzGxxv7z" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -41,19 +31,19 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Kageshimasu\Desktop\web_app\crowlizer\backend\crowlizer_api\tests" />
-      <recent name="C:\Users\Kageshimasu\Desktop\web_app\crowlizer\backend\crowlizer_api\models\infra\design" />
-      <recent name="C:\Users\Kageshimasu\Desktop\web_app\crowlizer\backend\crowlizer_api\models\infra\checker" />
-      <recent name="C:\Users\Kageshimasu\Desktop\web_app\crowlizer\backend\crowlizer_api\models\infra\dtos" />
-      <recent name="C:\Users\Kageshimasu\Desktop\web_app\crowlizer\backend\crowlizer_api\models\infra\date" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Kageshimasu\Desktop\web_app\crowlizer\backend\model_creator" />
       <recent name="C:\Users\Kageshimasu\Desktop\web_app\crowlizer\backend\crowlizer_api\tests" />
       <recent name="C:\Users\Kageshimasu\Desktop\web_app\crowlizer\backend\crowd_analyzer" />
       <recent name="C:\Users\Kageshimasu\Desktop\web_app\crowlizer\backend\crowlizer_api\models\domain" />
       <recent name="C:\Users\Kageshimasu\Desktop\web_app\crowlizer\backend\crowlizer_api\models\infra\ml" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Kageshimasu\Desktop\web_app\crowlizer\backend\crowlizer_api\tests" />
+      <recent name="C:\Users\Kageshimasu\Desktop\web_app\crowlizer\backend\crowlizer_api\models\infra\design" />
+      <recent name="C:\Users\Kageshimasu\Desktop\web_app\crowlizer\backend\crowlizer_api\models\infra\checker" />
+      <recent name="C:\Users\Kageshimasu\Desktop\web_app\crowlizer\backend\crowlizer_api\models\infra\dtos" />
+      <recent name="C:\Users\Kageshimasu\Desktop\web_app\crowlizer\backend\crowlizer_api\models\infra\date" />
     </key>
   </component>
   <component name="RunDashboard">
