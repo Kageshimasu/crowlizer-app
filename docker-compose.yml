@@ -8,8 +8,10 @@ services:
       POSTGRES_USER: Kageshimasu
       POSTGRES_PASSWORD: Kageshimasu
       POSTGRES_DB: crowlizer_db
-    ports:
-      - 5432:5432
+    # ports:
+    #   - 5432:5432
+    networks:
+      - db_network
 
   admin:
       image: dockage/phppgadmin
@@ -20,27 +22,30 @@ services:
         PHP_PG_ADMIN_SERVER_DEFAULT_DB: crowlizer_db
       ports:
         - 9000:80
+      networks:
+        - db_network
 
   django:
     build: ./backend/django
-    command: bash -c "python manage.py migrate && uwsgi --socket :8001 --module crowlizer_api.wsgi"
+    command: bash -c "python manage.py migrate && uwsgi --socket :8001 --wsgi-file config/wsgi.py"
     # bash -c "python manage.py migrate && uwsgi --http :8001 --module crowlizer_api.wsgi"
-    # bash -c "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
-    # ports:
-    #   - 8001:8000
-    expose:
-      - "8001"
+    # command: bash -c "python manage.py migrate && python manage.py runserver 8001"
     stdin_open: true
     depends_on:
       - db
+    networks:
+      - nginx_network
+      - db_network
   
-  # web:
-  #   build: ./frontend/
-  #   command: npm run serve
-  #   ports:
-  #     - 8080:8080
-  #   depends_on:
-  #     - django
+  web:
+    build: ./frontend/
+    # command: npm run serve
+    ports:
+      - 8080:80
+    depends_on:
+      - django
+    networks:
+      - nginx_network
 
   nginx:
     image: nginx:1.13
@@ -52,3 +57,11 @@ services:
       - ./backend/nginx/uwsgi_params:/etc/nginx/uwsgi_params
     depends_on:
       - django
+    networks:
+      - nginx_network
+
+networks:
+  nginx_network:
+    driver: bridge
+  db_network:
+    driver: bridge

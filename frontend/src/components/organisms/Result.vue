@@ -129,7 +129,7 @@ export default class Result extends Vue {
   startOver () {
     const newProjectDto = new ProjectDto()
     if (this.$store.getters.projectObject.equals(newProjectDto)) {
-      this.$router.push({ path: '/' })
+      this.$router.push('/')
     }
   }
 

@@ -179,7 +179,7 @@ export default class Form extends Vue {
   mounted () {
     window.addEventListener('beforeunload', this.onBeforeunloadHandler, false)
     if (this.$route.path !== this.defaultTab.route) {
-      this.$router.push({ path: this.defaultTab.route })
+      this.$router.push(this.defaultTab.route)
     }
     this.reset()
   }

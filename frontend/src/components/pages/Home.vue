@@ -1,7 +1,7 @@
 <template>
   <div class="home-form flex-center-container">
     <div>
-      <h1 class="display-2 font-weight-bold mb-3">
+      <h1 class="display-2 font-weight-bold mb-3 text-center">
         Welcome to {{title}}
       </h1>
       <p class="subheading font-weight-regular text-center">
@@ -9,7 +9,7 @@
         Click the button below to try this.
       </p>
       <p class="flex-center-container">
-        <a href="/form/goal" title="analyze" class="btn btn-default btn-xl">ANALYZE</a>
+        <router-link to="/form/date" class="btn btn-default btn-xl">ANALYZE</router-link>
       </p>
     </div>
   </div>
