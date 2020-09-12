@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 
 import os
 
+from os import environ
+
 from crowlizer_api.apps import CrowlizerApiConfig
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -79,14 +81,20 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
+db_host = str(environ.get('DB_HOST') if environ.get('DB_HOST') is not None else 'localhost')
+db_port = str(environ.get('DB_PORT') if environ.get('DB_PORT') is not None else '5432')
+
+print("Database Host: " + db_host)
+print("Database Port: " + db_port)
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'crowlizer_db',
         'USER': 'Kageshimasu',
         'PASSWORD': 'Kageshimasu',
-        'HOST': 'crowlizer_db_1',
-        'PORT': '5432',
+        'HOST': db_host,
+        'PORT': db_port
     }
 }
 
