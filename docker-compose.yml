@@ -26,6 +26,9 @@ services:
   django:
     build: ./backend/
     command: bash -c "python manage.py migrate && uwsgi --socket :8001 --wsgi-file config/wsgi.py"
+    environment: 
+        DB_HOST: db
+        DB_PORT: 5432
     stdin_open: true
     depends_on:
       - db
