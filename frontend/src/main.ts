@@ -5,7 +5,7 @@ import store from './store'
 import vuetify from './plugins/vuetify'
 import axios from 'axios'
 
-axios.defaults.baseURL = 'http://localhost:8000/'
+axios.defaults.baseURL = 'http://localhost/'
 axios.defaults.headers.post['Content-Type'] = 'application/json;charset=utf-8'
 
 Vue.config.productionTip = false
